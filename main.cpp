@@ -6,12 +6,16 @@ using namespace std;
 #define DEBUG false
 
 	
-int add_numbers(int x, int y){
+int add_numbers(int &x, int y){
 	return x+=y;
+}
 int main(){
 	
-	cout << "Adding 5 to 300: " << add_numbers(5,300);
-	cout << "Adding 5 to 300: " << add_numbers(5,300);
-	cout << "Adding 5 to 300: " << add_numbers(5,300);
+	int num1 = 5;
+	int num2 = 300;
+	
+	cout << "Adding 5 to 300: " << add_numbers(num1,num2) << endl;
+	cout << "Adding 5 to 300: " << add_numbers(num1,num2) << endl;
+	cout << "Adding 5 to 300: " << add_numbers(num1,num2) << endl;
 	return 0;
 }
